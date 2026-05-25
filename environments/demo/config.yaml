@@ -57,7 +57,7 @@ deployments:
             provided_parameter_contexts: ".*POSTGRES"
             parameters:
               Database Connection URL: "#{POSTGRES_URL}" # coming from Snowflake Secrets Parameter Provider
-              Database Name: "mydb"
+              Database Name: "postgres"
               Database User: "snowflake_admin"
               Database Password: "#{POSTGRES_PWD}" # coming from Snowflake Secrets Parameter Provider
               Schema Name: "demo_postgres"
@@ -73,7 +73,7 @@ deployments:
                 parameter: "Source Database Driver"
             parameters:
               Source Database Publication Name: "demo_publication"
-              Source Database Connection URL: "jdbc:postgresql://fh3edivq3nhifmcg4yp3d3kni4.sfsehol-summit-26-de225-test-sytsxl.us-west-2.aws.postgres.snowflake.app:5432/mydb?sslmode=require"
+              Source Database Connection URL: "jdbc:postgresql://fh3edivq3nhifmcg4yp3d3kni4.sfsehol-summit-26-de225-test-sytsxl.us-west-2.aws.postgres.snowflake.app:5432/postgres?sslmode=require"
               Source Database User: "snowflake_admin"
               Source Database Password: "DEMO_DATABASE.POSTGRES.POSTGRES_PWD"
               Included Comma Separated Source Table Names: "demo_postgres.customers,demo_postgres.orders,demo_postgres.order_items"
